@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/febicon.png" sizes="16X16">
+    <link rel="stylesheet" href="nav.css">
+    <title>Custom Property</title>
+    <style>
+        :root {
+            --main-color: orange;
+            --border-color: black;
+            --background-color: tomato;
+            --side-width: 200px;
+
+        }
+
+        h1 {
+            color: var(--main-color);
+
+        }
+
+        h2 {
+            color: var(--main-color);
+            border: 1px solid slateblue;
+        }
+
+
+
+        h4 {
+
+            background-color: slateblue;
+        }
+
+
+
+        footer {
+            clear: both;
+            color: var(--main-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .side-nav,
+        .blogs {
+            float: left;
+            height: 300px;
+
+        }
+
+        .side-nav {
+            background-color: springgreen;
+            width: var(--side-width)
+        }
+
+        .blogs {
+            background-color: var(--background-color);
+            width: calc(100% - 2*var(--side-width));
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="form.html">Form</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="">About Us
+                        <ul>
+                            <li><a href="">link-1</a></li>
+                            <li><a href="">link-2</a></li>
+                            <li><a href="">link-3</a></li>
+                            <li><a href="">link-4</a></li>
+                        </ul>
+
+                    </a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to Nepbar</h1>
+    </header>
+    <main>
+        <h1>My custom Property</h1>
+        <h2>My custom Property</h2>
+        <h4>My custom Property</h4>
+
+        <section>
+            <aside class="side-nav">
+                My side navigation
+            </aside>
+            <div class="blogs">
+                <h5>Blogs</h5>
+            </div>
+        </section>
+
+
+    </main>
+    <footer>
+        <p><small>copyright</small></p>
+    </footer>
+</body>
+
+</html>
